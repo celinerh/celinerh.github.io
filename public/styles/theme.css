@@ -1,0 +1,51 @@
+/* font import */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400&display=swap");
+
+.header {
+  background-color: #202020;
+}
+
+.menu__burgermenu-icon {
+  color: #fff;
+}
+
+.menu__link {
+  color: #fff;
+}
+
+.wrapper {
+  background-color: #f0f2fa;
+}
+
+.main > div {
+  background-color: #fff;
+}
+
+.city {
+  text-align: center;
+  font-size: 4rem;
+}
+
+.city,
+.card,
+.text {
+  border-radius: 10px;
+}
+
+.card__icon-circle {
+  background-color: #f0f2fa;
+}
+
+.card__description {
+  color: #b9b9b9;
+}
+
+/* dark mode */
+.wrapper.dark-mode {
+  background-color: #27272a;
+  color: #fff;
+}
+
+.wrapper.dark-mode .main > div {
+  background-color: #52525b;
+}

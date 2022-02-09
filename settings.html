@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- stylesheet -->
+    <link href="public/styles/style.css" rel="stylesheet" />
+
+    <!-- script -->
+    <script src="public/scripts/dark-mode.js" defer></script>
+    <script src="public/scripts/form-validation.js" defer></script>
+    <script src="public/scripts/burgermenu.js" defer></script>
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/0304ecf26b.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- tab icon -->
+    <link rel="icon" href="public/images/weather-favicon.svg" sizes="32x32" />
+
+    <!-- title -->
+    <title>Local weather | Settings</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="menu">
+          <div class="menu__burgermenu">
+            <i class="fas fa-bars menu__burgermenu-icon" aria-hidden="true"></i>
+          </div>
+
+          <ul class="menu__list">
+            <li class="menu__item">
+              <a class="menu__link" href="index.html" title="Go to dashboard"
+                ><i class="fas fa-home menu__icon"></i>Dashboard</a
+              >
+            </li>
+
+            <li class="menu__item menu__item--active">
+              <a class="menu__link" href="settings.html" title="Go to settings"
+                ><i class="fas fa-cog menu__icon"></i>Settings</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="content">
+        <main class="main settings">
+          <h1 class="main__title">Settings</h1>
+          <div class="settings__item dark-mode">
+            <p>Dark mode</p>
+
+            <label class="toggle" for="myToggle">
+              <input
+                class="toggle__input"
+                name=""
+                type="checkbox"
+                id="myToggle"
+              />
+              <div class="toggle__fill"></div>
+            </label>
+          </div>
+
+          <h2 class="main__subtitle">
+            Didn't find what you were looking for? Send us a message!
+          </h2>
+          <div class="form-container settings__item">
+            <form class="message-form" action="javascript:void(0)">
+              <!-- name -->
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Full name"
+                class="message-form__input"
+              />
+              <p class="message-form__error-message"></p>
+
+              <!-- e-mail -->
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="Email adress"
+                class="message-form__input"
+              />
+              <p class="message-form__error-message"></p>
+
+              <!-- message -->
+              <textarea
+                name="message"
+                id="message"
+                rows="6"
+                placeholder="Write your message here"
+                class="message-form__textarea"
+              ></textarea>
+              <p class="message-form__error-message"></p>
+
+              <!-- button -->
+              <button type="submit" value="Submit" class="message-form__button">
+                Submit
+              </button>
+              <p class="message-form__error-message"></p>
+            </form>
+          </div>
+          <!-- /form-container -->
+        </main>
+      </div>
+      <!-- /content -->
+    </div>
+    <!-- /wrapper -->
+  </body>
+</html>

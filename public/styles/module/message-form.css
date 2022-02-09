@@ -1,0 +1,38 @@
+.message-form {
+  width: 50%;
+}
+
+.message-form__input,
+.message-form__textarea {
+  width: 100%;
+  background-color: #eff0f6;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  padding: 2%;
+}
+
+.message-form__textarea {
+  resize: none;
+}
+
+.message-form__button {
+  cursor: pointer;
+  border: none;
+  padding-inline: 35px;
+  padding-block: 0.2em;
+  border-radius: 6px;
+}
+
+/* error message */
+
+.message-form__error-message {
+  color: #ff0000;
+  font-size: 0.7em;
+  height: 1.5em;
+}
+
+.message-form__button {
+  width: 120px;
+  transition: background 0.15s;
+}

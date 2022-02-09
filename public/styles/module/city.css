@@ -1,0 +1,7 @@
+.city {
+  grid-column: span 4;
+}
+
+.city__title {
+  font-weight: 400;
+}

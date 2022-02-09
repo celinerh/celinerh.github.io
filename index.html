@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- stylesheet -->
+    <link href="public/styles/style.css" rel="stylesheet" />
+
+    <!-- script -->
+    <script src="public/scripts/local-weather.js" defer></script>
+    <script src="public/scripts/dark-mode.js" defer></script>
+    <script src="public/scripts/burgermenu.js" defer></script>
+
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/0304ecf26b.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- tab icon -->
+    <link rel="icon" href="public/images/weather-favicon.svg" sizes="32x32" />
+
+    <!-- title -->
+    <title>Local weather | Dashboard</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <nav class="menu">
+          <div class="menu__burgermenu">
+            <i class="fas fa-bars menu__burgermenu-icon" aria-hidden="true"></i>
+          </div>
+          <ul class="menu__list">
+            <li class="menu__item menu__item--active">
+              <a class="menu__link" href="index.html" title="Go to dashboard"
+                ><i class="fas fa-home menu__icon"></i>Dashboard</a
+              >
+            </li>
+
+            <li class="menu__item">
+              <a class="menu__link" href="settings.html" title="Go to settings"
+                ><i class="fas fa-cog menu__icon"></i>Settings</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="content">
+        <main class="main index">
+          <h1 class="main__title">Dashboard</h1>
+
+          <div class="city">
+            <h2 class="city__title">&nbsp;</h2>
+          </div>
+
+          <div class="card local-weather">
+            <div class="card__icon-circle">
+              <img
+                class="local-weather__icon"
+                src="public/images/loader.gif"
+                alt="Current weather icon"
+                title="Current weather icon"
+              />
+            </div>
+            <div class="card__content">
+              <p class="weather"></p>
+              <p class="card__description">Current weather</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__icon-circle">
+              <img
+                class="card__icon"
+                src="public/images/feels-like.svg"
+                alt="Temperature icon"
+                title="Temperature icon"
+              />
+            </div>
+            <div class="card__content">
+              <p class="temperature"></p>
+              <p class="card__description">Current temperature</p>
+            </div>
+          </div>
+
+          <div class="card feels-like">
+            <div class="card__icon-circle">
+              <img
+                class="card__icon"
+                src="public/images/feels-like.svg"
+                alt="Temperature icon"
+                title="Temperature icon"
+              />
+            </div>
+            <div class="card__content">
+              <p class="feels-like__temperature"></p>
+              <p class="card__description">Feels like</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__icon-circle">
+              <img
+                class="card__icon"
+                src="public/images/clouds.svg"
+                alt="Cloud icon"
+                title="Cloud icon"
+              />
+            </div>
+            <div class="card__content">
+              <p class="cloudiness"></p>
+              <p class="card__description">Cloudiness</p>
+            </div>
+          </div>
+
+          <div class="text">
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Quibusdam necessitatibus distinctio delectus ipsum vero repellat
+              sint velit id deserunt harum ea minima maxime esse dignissimos,
+              totam expedita eveniet, unde sunt! Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Ad sit dicta, ullam quasi natus
+              harum, doloremque a eligendi praesentium tenetur illum recusandae
+              nulla corrupti atque consectetur saepe sequi dolorem? Omnis? Lorem
+              ipsum dolor, sit amet consectetur adipisicing elit. Aut quisquam
+              nostrum quibusdam praesentium beatae, molestias obcaecati aliquam
+              minima dolor sit eaque voluptas debitis, possimus tenetur dolorem,
+              perferendis atque unde recusandae?
+            </p>
+          </div>
+
+          <div class="card sunrise">
+            <div class="card__icon-circle">
+              <img
+                class="card__icon"
+                src="public/images/sunrise.svg"
+                alt="Sunrise icon"
+                title="Sunrise icon"
+              />
+            </div>
+            <div class="card__content">
+              <p class="sunrise__time"></p>
+              <p class="card__description">Sunrise</p>
+            </div>
+          </div>
+
+          <div class="card sunset">
+            <div class="card__icon-circle">
+              <img
+                class="card__icon"
+                src="public/images/sunset.svg"
+                alt="Sunset icon"
+                title="Sunset icon"
+              />
+            </div>
+            <div class="card__content">
+              <p class="sunset__time"></p>
+              <p class="card__description">Sunset</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__icon-circle">
+              <img
+                class="card__icon"
+                src="public/images/humidity.svg"
+                alt="Humidity icon"
+                title="Humidity icon"
+              />
+            </div>
+            <div class="card__content">
+              <p class="humidity"></p>
+              <p class="card__description">Humidity</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__icon-circle">
+              <img
+                class="card__icon"
+                src="public/images/pressure.svg"
+                alt="Pressure icon"
+                title="Pressure icon"
+              />
+            </div>
+            <div class="card__content">
+              <p class="atmospheric-pressure"></p>
+              <p class="card__description">Atmospheric pressure</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__icon-circle">
+              <img
+                class="card__icon"
+                src="public/images/wind.svg"
+                alt="Wind icon"
+                title="Wind icon"
+              />
+            </div>
+            <div class="card__content">
+              <p class="wind-speed"></p>
+              <p class="card__description">Wind speed</p>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__icon-circle">
+              <img
+                class="card__icon"
+                src="public/images/clouds.svg"
+                alt=""
+                title=""
+              />
+            </div>
+            <div class="card__content">
+              <p class="">XXXX</p>
+              <p class="card__description">xxxxxxxxxxxx</p>
+            </div>
+          </div>
+        </main>
+      </div>
+      <!-- /content -->
+    </div>
+    <!-- /wrapper -->
+  </body>
+</html>
