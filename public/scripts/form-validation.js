@@ -106,9 +106,10 @@ function onSubmit(e) {
     submitButton.classList.add("message-form__button--success");
     submitButton.textContent = "Sent";
 
-    nameInputField.value = "";
-    emailInputField.value = "";
-    messageInputField.value = "";
+    form.reset();
+    // nameInputField.value = "";
+    // emailInputField.value = "";
+    // messageInputField.value = "";
 
     setTimeout(() => {
       submitButton.classList.remove("message-form__button--success");

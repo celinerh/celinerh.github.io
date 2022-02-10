@@ -17,7 +17,10 @@ getLocation();
 // Get location
 function getLocation() {
   if (navigator.geolocation) {
-    navigator.geolocation.getCurrentPosition(getWeatherByLocation);
+    navigator.geolocation.getCurrentPosition(
+      getWeatherByLocation,
+      getWeatherByLocation
+    );
   } else {
     $cityElement.innerHTML = "Geolocation is not supported by this browser.";
   }
@@ -25,6 +28,11 @@ function getLocation() {
 
 // Get weather information at location
 async function getWeatherByLocation(position) {
+  // If user blocks location
+  if (position instanceof GeolocationPositionError) {
+    position = { coords: { latitude: 55.6667, longitude: 12.5833 } };
+  }
+
   const API_KEY = "fe6676708c9a78cc437287b5063ab7aa";
   const API_UNITS = "metric";
   const URL_LOCATION = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${API_KEY}&units=${API_UNITS}`;
@@ -34,9 +42,6 @@ async function getWeatherByLocation(position) {
 
   // Set city
   $cityElement.textContent = json.name;
-
-  //
-  //getInformationAboutCity();
 
   // Set weather icon
   $weatherIcon.src = `http://openweathermap.org/img/wn/${json.weather[0].icon}@2x.png`;
@@ -88,42 +93,3 @@ function convertTimestampToTime(timestamp) {
   // Will display time in 06:30 or 10:30 format
   return hours.slice(-2) + ":" + minutes.slice(-2);
 }
-
-// https://en.wikipedia.org/w/api.php?action=query&format=json&titles=Roskilde&prop=extracts&exintro&explaintext
-
-// async function getInformationAboutCity() {
-//   // const URL_WIKI = `https://en.wikipedia.org/w/api.php?action=query&format=json&titles=${city}&prop=extracts&exintro&explaintext`;
-
-//   const URL_WIKI = `https://en.wikipedia.org/w/api.php?action=query&prop=extracts&exintro&explaintext&format=json&redirects&titles=Roskilde`;
-//   let response = await fetch(URL_WIKI);
-//   let json = await response.json();
-
-//   console.log(json);
-
-// var url = "https://www.mediawiki.org/w/api.php";
-
-// var params = {
-//   action: "query",
-//   format: "json",
-//   titles: "Roskilde",
-//   prop: "extracts&exintro&explaintext",
-// };
-
-// url = url + "?origin=*";
-// Object.keys(params).forEach(function (key) {
-//   url += "&" + key + "=" + params[key];
-// });
-
-// console.log(url);
-// fetch(url)
-//   .then(function (response) {
-//     return response.json();
-//   })
-//   .then(function (response) {
-//     var pages = response.query.pages;
-//     console.log(pages);
-//   })
-//   .catch(function (error) {
-//     console.log(error);
-//   });
-// }
